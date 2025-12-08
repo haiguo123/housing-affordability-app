@@ -4,7 +4,7 @@ An interactive U.S. housing affordability data visualization dashboard exploring
 
 ## 🌐 Live Demo
 
-**Try it online:** [https://houseapp-cqznkr7u5sx3kctd8ui7gs.streamlit.app](https://houseapp-cqznkr7u5sx3kctd8ui7gs.streamlit.app)
+**Try it online:** https://housingaffordability.streamlit.app/
 
 ## 📋 Project Structure
 
