@@ -66,7 +66,7 @@ def create_city_choropleth(df_city, cbsa_gdf, map_style, metric_name, is_dark_mo
             )
 
     fig.add_trace(
-        go.Choroplethmapbox(
+        go.Choroplethmap(
             geojson=geojson,
             locations=city_polygons_4326["id"],
             z=city_polygons_4326["avg_metric_value"],
@@ -108,7 +108,7 @@ def create_city_choropleth(df_city, cbsa_gdf, map_style, metric_name, is_dark_mo
     )
 
     fig.add_trace(
-        go.Scattermapbox(
+        go.Scattermap(
             lat=city_polygons_4326["center_lat"],
             lon=city_polygons_4326["center_lon"],
             mode="markers",
@@ -123,7 +123,7 @@ def create_city_choropleth(df_city, cbsa_gdf, map_style, metric_name, is_dark_mo
     )
 
     fig.update_layout(
-        mapbox=dict(
+        map=dict(
             style=map_style,
             zoom=US_ZOOM_LEVEL,
             center={"lat": US_CENTER_LAT, "lon": US_CENTER_LON},
@@ -192,7 +192,7 @@ def create_zip_choropleth(
 
     fig = go.Figure()
     fig.add_trace(
-        go.Choroplethmapbox(
+        go.Choroplethmap(
             geojson=geojson,
             locations=gdf_4326["id"],
             z=gdf_4326["metric_value"],
@@ -246,7 +246,7 @@ def create_zip_choropleth(
     )
 
     fig.update_layout(
-        mapbox=dict(
+        map=dict(
             style=map_style,
             zoom=9,
             center={"lat": center_lat, "lon": center_lon},
